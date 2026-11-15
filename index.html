@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Odunayo Ojomo | Flutter Engineer</title>
+<title>Odunayo Ojomo | Software Engineer</title>
 <style>
 :root{--bg:#fafafa;--fg:#0b0b0b;--mute:#6a6a6a;--line:#e0e0e0;--card:#fff;--ac:#4d7c0f;--onac:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0a0a;--fg:#f2f2f2;--mute:#9a9a9a;--line:#252525;--card:#121212;--ac:#c8f542;--onac:#0a0a0a}}
@@ -62,24 +62,36 @@ h2::before{content:"";width:22px;height:2px;background:var(--ac);align-self:cent
 .contact p.big{font-size:clamp(24px,4vw,36px);letter-spacing:-.02em;margin:0 0 22px;line-height:1.2}
 .contact .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 footer{padding:28px 0 56px;color:var(--mute);font-size:13px;text-align:center}
-@media(max-width:760px){.hero,.two,.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}.hero{padding-top:40px}nav .l a{display:none}}
+.ab{display:grid;grid-template-columns:1.5fr 1fr;gap:40px}
+.ab p{margin:0 0 16px;color:var(--mute)}
+.ab p b{color:var(--fg);font-weight:600}
+.glance{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:12px 22px;align-self:start}
+.glance div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.glance div:last-child{border:0}
+.glance span:first-child{color:var(--mute)}
+.skg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.skg .sk{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:20px;margin:0}
+.skg .sk span{background:var(--bg)}
+.tl{max-width:720px}
+.tl p{margin:4px 0 0;font-size:14px;color:var(--mute)}
+@media(max-width:760px){.hero,.two,.grid,.ab{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}.hero{padding-top:40px}nav .l a{display:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav><div class="l"><b>OO</b><a href="#work">Work</a><a href="#path">Experience</a><a href="#skills">Skills</a></div><button id="tg" type="button">Theme</button></nav>
+<nav><div class="l"><b>OO</b><a href="#about">About</a><a href="#work">Work</a><a href="#path">Experience</a><a href="#skills">Skills</a></div><button id="tg" type="button">Theme</button></nav>
 
 <section class="hero">
 <div>
 <div class="tag"><i></i>Open to remote roles</div>
 <h1>Odunayo<br><em>Ojomo.</em></h1>
-<p class="bio">I’m a software engineer who builds fintech and payment apps in Flutter, with backend experience in Java ,Java Spring, Node.js and transaction processing.</p>
+<p class="bio">I’m a software engineer who builds fintech and payment apps in Flutter, with backend experience in Java, Spring Boot and Node.js.</p>
 </div>
 <div class="cta">
 <a class="btn p" href="mailto:odunayoojomo0@gmail.com">Get in touch</a>
 <a class="btn" href="https://github.com/virtz" target="_blank" rel="noopener">GitHub</a>
 <a class="btn" href="https://www.linkedin.com/in/odunayo-ojomo/" target="_blank" rel="noopener">LinkedIn</a>
-<span class="meta">Currently based in Mauritius</span>
+<span class="meta">Based in Mauritius</span>
 </div>
 </section>
 
@@ -88,6 +100,22 @@ footer{padding:28px 0 56px;color:var(--mute);font-size:13px;text-align:center}
 <div><b>40%</b><span>faster transactions, Swwipe POS</span></div>
 <div><b>30%</b><span>fewer transaction failures</span></div>
 <div><b>25%</b><span>higher adoption, Swwipe POS</span></div>
+</section>
+
+<h2 id="about">About</h2>
+<section class="ab">
+<div>
+<p>I’m a software engineer with <b>6+ years</b> of production mobile experience, mostly in <b>Flutter</b> and mostly in <b>fintech</b>. I’ve built banking, payments and wallet apps that real customers rely on, so I care about getting money flows, state and error handling right.</p>
+<p>At <b>Swwipe</b> I lead Flutter development of an <b>NFC contactless POS</b> app, and I contribute on the Java backend that supports it. I build with <b>Clean Architecture</b> and <b>BLoC or Riverpod</b>, and I rely on code review and automated testing to keep releases clean.</p>
+<p>I take apps all the way to the stores. I work with <b>CI/CD</b> pipelines and <b>Play Store and App Store releases</b>, and I’ve worked in distributed teams across time zones, including a US-based team at Envizien. I’m based in Mauritius and open to remote roles.</p>
+</div>
+<div class="glance">
+<div><span>Role</span><span>Software Engineer</span></div>
+<div><span>Currently</span><span>Swwipe</span></div>
+<div><span>Experience</span><span>6+ years</span></div>
+<div><span>Location</span><span>Mauritius</span></div>
+<div><span>Availability</span><span>Open to remote</span></div>
+</div>
 </section>
 
 <h2 id="work">Selected work</h2>
@@ -104,7 +132,7 @@ footer{padding:28px 0 56px;color:var(--mute);font-size:13px;text-align:center}
 <div class="n">02</div>
 <h3>AltBank</h3>
 <div class="meta">Mobile banking</div>
-<p>An Islamic banking mobile platform built in Flutter, with Clean Architecture and API-driven account features.</p>
+<p>A fintech mobile banking app built in Flutter, with Clean Architecture and API-driven account features.</p>
 <div class="lk"><a href="https://altbank.ng/" target="_blank" rel="noopener">Website</a><a href="https://apps.apple.com/us/app/altbank/id6461120800" target="_blank" rel="noopener">App Store</a></div>
 <div class="tags"><span>Flutter</span><span>Dart</span><span>REST APIs</span></div>
 </div>
@@ -118,16 +146,18 @@ footer{padding:28px 0 56px;color:var(--mute);font-size:13px;text-align:center}
 <div class="card">
 <div class="n">03</div>
 <h3>AltPro</h3>
-<div class="meta">Mobile app</div>
-<p>A mobile app I contributed to.</p>
+<div class="meta">Corporate banking</div>
+<p>A corporate banking app for businesses and institutions, covering single and bulk transfers, multi-user approval workflows, statements and reports, with 2FA token security. I contributed to the app.</p>
 <div class="lk"><a href="https://apps.apple.com/us/app/altpro-mobile/id6503241379" target="_blank" rel="noopener">App Store</a></div>
+<div class="tags"><span>Business payments</span><span>Approvals</span><span>2FA</span></div>
 </div>
 <div class="card">
 <div class="n">04</div>
 <h3>Zyggy</h3>
-<div class="meta">Mobile app</div>
-<p>A mobile app I contributed to.</p>
+<div class="meta">Neo bank &middot; Payments</div>
+<p>A neo bank and payments app for sub-Saharan Africa. Users send money to bank accounts or to other users by username tag, create virtual dollar cards for international payments, and pay utility bills and airtime. I contributed to the app.</p>
 <div class="lk"><a href="https://apps.apple.com/us/app/zyggy/id6473276596" target="_blank" rel="noopener">App Store</a></div>
+<div class="tags"><span>P2P payments</span><span>Virtual cards</span><span>Bill payments</span></div>
 </div>
 <div class="card">
 <div class="n">06</div>
@@ -138,26 +168,25 @@ footer{padding:28px 0 56px;color:var(--mute);font-size:13px;text-align:center}
 </div>
 </section>
 
-<section class="two">
-<div>
 <h2 id="path">Experience</h2>
 <div class="tl">
-<div><b>Software Engineer</b><span>Swwipe Financial Services &middot; 2023 to now</span></div>
-<div><b>Flutter Developer (Contract)</b><span>Envizien, USA &middot; 2025 to 2026</span></div>
-<div><b>Flutter Developer (Contract)</b><span>Sterling Bank &middot; 2022 to 2023</span></div>
-<div><b>Flutter Developer</b><span>Ajeo &middot; 2021 to 2022</span></div>
-<div><b>Flutter &amp; Full Stack Developer</b><span>Biomach Technologies &middot; 2020 to 2021</span></div>
-<div><b>Flutter Developer</b><span>AddlioTech &middot; 2018 to 2020</span></div>
+<div><b>Software Engineer</b><span>Swwipe Financial Services &middot; 2023 to now</span><p>Lead Flutter development of an NFC POS platform and contribute on the Java backend.</p></div>
+<div><b>Flutter Developer (Contract)</b><span>Envizien, USA &middot; 2025 to 2026</span><p>Built enterprise Flutter apps with BLoC and Riverpod in a US-based distributed team.</p></div>
+<div><b>Flutter Developer (Contract)</b><span>Sterling Bank &middot; 2022 to 2023</span><p>Delivered core banking modules for thousands of users and refactored a legacy codebase to MVVM.</p></div>
+<div><b>Flutter Developer</b><span>Ajeo &middot; 2021 to 2022</span><p>Cut crash rates by 35% and launch time by 40%, and migrated the codebase to null safety.</p></div>
+<div><b>Flutter &amp; Full Stack Developer</b><span>Biomach Technologies &middot; 2020 to 2021</span><p>Built reusable component libraries and mentored backend developers on API design.</p></div>
+<div><b>Flutter Developer</b><span>AddlioTech &middot; 2018 to 2020</span><p>Built an internal enterprise app and introduced automated testing and CI workflows.</p></div>
 </div>
-</div>
-<div>
+
 <h2 id="skills">Skills</h2>
-<div class="sk"><h4>Mobile</h4><div><span>Flutter</span><span>Dart</span><span>Platform channels</span><span>NFC</span><span>Offline-first</span><span>Push notifications</span></div></div>
-<div class="sk"><h4>Architecture</h4><div><span>Clean Architecture</span><span>MVVM</span><span>BLoC</span><span>Riverpod</span><span>Provider</span></div></div>
-<div class="sk"><h4>Backend</h4><div><span>Java</span><span>Node.js</span><span>ISO 8583</span><span>Express.js</span><span>MongoDB</span> <span>MySql</span><span>SQL</span></div></div>
-<div class="sk"><h4>Delivery</h4><div><span>GitHub Actions</span><span>Codemagic</span><span>Firebase</span><span>Crashlytics</span></div></div>
+<div class="skg">
+<div class="sk"><h4>Mobile</h4><div><span>Flutter</span><span>Dart</span><span>Platform channels</span><span>NFC</span><span>QR systems</span><span>Offline-first</span><span>Push notifications</span></div></div>
+<div class="sk"><h4>Architecture</h4><div><span>Clean Architecture</span><span>MVVM</span><span>BLoC</span><span>Riverpod</span><span>Provider</span><span>Stacked</span><span>Modular design</span></div></div>
+<div class="sk"><h4>Backend &amp; data</h4><div><span>Java</span><span>Spring Boot</span><span>Node.js</span><span>ISO 8583</span><span>MongoDB</span><span>MySQL</span><span>SQL</span></div></div>
+<div class="sk"><h4>Release &amp; delivery</h4><div><span>GitHub Actions</span><span>Codemagic</span><span>Firebase</span><span>Play Store releases</span><span>App Store releases</span></div></div>
+<div class="sk"><h4>Quality</h4><div><span>Unit testing</span><span>Widget testing</span><span>Integration testing</span><span>TDD</span><span>Performance profiling</span><span>Code review</span></div></div>
+<div class="sk"><h4>Analytics &amp; monitoring</h4><div><span>Firebase Analytics</span><span>Crashlytics</span><span>MixPanel</span></div></div>
 </div>
-</section>
 
 <section class="contact">
 <p class="big">Looking for a Flutter engineer who ships?</p>
