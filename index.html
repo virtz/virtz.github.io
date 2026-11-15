@@ -5,102 +5,176 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Odunayo Ojomo | Flutter Engineer</title>
 <style>
-:root{--bg:#fff;--fg:#0a0a0a;--mute:#6b6b6b;--line:#e4e4e4;--card:#f7f7f7;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0a0a;--fg:#f2f2f2;--mute:#9a9a9a;--line:#262626;--card:#131313}}
-:root[data-theme="dark"]{--bg:#0a0a0a;--fg:#f2f2f2;--mute:#9a9a9a;--line:#262626;--card:#131313}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
+:root{--bg:#fafafa;--fg:#0b0b0b;--mute:#6a6a6a;--line:#e0e0e0;--card:#fff;--ac:#4d7c0f;--onac:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0a0a;--fg:#f2f2f2;--mute:#9a9a9a;--line:#252525;--card:#121212;--ac:#c8f542;--onac:#0a0a0a}}
+:root[data-theme="dark"]{--bg:#0a0a0a;--fg:#f2f2f2;--mute:#9a9a9a;--line:#252525;--card:#121212;--ac:#c8f542;--onac:#0a0a0a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif}
-main{max-width:720px;margin:0 auto;padding:56px 22px 72px}
 a{color:inherit}
-h1{font-size:clamp(34px,7vw,52px);line-height:1.08;margin:0 0 14px;letter-spacing:-.02em}
-h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:64px 0 18px;font-weight:600}
-.role{color:var(--mute);margin:0 0 22px}
-.bio{font-size:19px;max-width:34em;margin:0 0 26px}
-.links{display:flex;flex-wrap:wrap;gap:10px}
-.links a{border:1px solid var(--fg);padding:8px 16px;border-radius:999px;text-decoration:none;font-size:14px}
-.links a:hover{background:var(--fg);color:var(--bg)}
-.card{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:20px 22px;margin-bottom:14px}
-.card h3{margin:0 0 4px;font-size:18px}
-.card p{margin:8px 0 0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-size:14px}
+nav .l{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;color:var(--mute)}
+nav a:hover{color:var(--fg)}
+nav b{color:var(--fg);letter-spacing:.02em}
+#tg{background:none;border:1px solid var(--line);color:var(--fg);border-radius:999px;padding:5px 13px;font:inherit;font-size:13px;cursor:pointer}
+.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;padding:72px 0 56px;align-items:end}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:4px 13px;margin-bottom:22px}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--ac);display:block}
+h1{font-size:clamp(40px,8vw,76px);line-height:1;margin:0 0 22px;letter-spacing:-.035em}
+h1 em{font-style:normal;color:var(--ac)}
+.bio{font-size:19px;color:var(--mute);max-width:30em;margin:0}
+.cta{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;text-decoration:none;font-size:15px;padding:11px 22px;border-radius:999px;border:1px solid var(--fg)}
+.btn.p{background:var(--ac);border-color:var(--ac);color:var(--onac);font-weight:600}
+.btn:hover{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden}
+.stats div{padding:22px;border-right:1px solid var(--line)}
+.stats div:last-child{border:0}
+.stats b{display:block;font-size:34px;letter-spacing:-.02em;color:var(--ac);line-height:1.1}
+.stats span{font-size:13px;color:var(--mute)}
+h2{display:flex;align-items:baseline;gap:12px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:88px 0 24px;font-weight:600}
+h2::before{content:"";width:22px;height:2px;background:var(--ac);align-self:center}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:24px;display:flex;flex-direction:column}
+.card.big{grid-column:1/-1}
+.card:hover{border-color:var(--ac)}
+.n{font-size:13px;color:var(--ac);font-weight:600;margin-bottom:10px}
+.card h3{margin:0 0 4px;font-size:21px;letter-spacing:-.01em}
 .meta{color:var(--mute);font-size:14px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.card p{margin:12px 0 0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:16px}
 .tags span{border:1px solid var(--line);border-radius:6px;padding:2px 9px;font-size:12px;color:var(--mute)}
-.row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
-.row:last-child{border:0}
-.row span:last-child{color:var(--mute);font-size:14px;white-space:nowrap}
-.skills p{margin:0 0 10px}
-.skills b{font-weight:600}
-footer{margin-top:64px;color:var(--mute);font-size:14px}
+.lk{display:flex;gap:18px;margin-top:14px;font-size:14px}.lk a{color:var(--ac);text-decoration:none;border-bottom:1px solid currentColor}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.tl{border-left:2px solid var(--line);padding-left:22px}
+.tl div{position:relative;padding:0 0 22px}
+.tl div::before{content:"";position:absolute;left:-29px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--ac)}
+.tl b{display:block;font-weight:600}
+.tl span{font-size:14px;color:var(--mute)}
+.sk{margin:0 0 20px}
+.sk h4{margin:0 0 8px;font-size:14px;font-weight:600}
+.sk div{display:flex;flex-wrap:wrap;gap:6px}
+.sk span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:13px}
+.contact{margin:96px 0 0;border:1px solid var(--line);background:var(--card);border-radius:18px;padding:44px 32px;text-align:center}
+.contact h2{display:none}
+.contact p.big{font-size:clamp(24px,4vw,36px);letter-spacing:-.02em;margin:0 0 22px;line-height:1.2}
+.contact .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+footer{padding:28px 0 56px;color:var(--mute);font-size:13px;text-align:center}
+@media(max-width:760px){.hero,.two,.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}.hero{padding-top:40px}nav .l a{display:none}}
 </style>
 </head>
 <body>
-<main>
-<h1>Odunayo Ojomo</h1>
-<p class="role">Flutter Engineer &middot; Mauritius &middot; Open to remote</p>
-<p class="bio">I'm a Flutter engineer who builds fintech and payment apps, with backend experience in Java, Spring Boot and ISO 8583 transaction processing.</p>
-<div class="links">
-<a href="mailto:odunayoojomo0@gmail.com">Email</a>
-<a href="https://github.com/virtz" target="_blank" rel="noopener">GitHub</a>
-<a href="https://www.linkedin.com/in/odunayo-ojomo/" target="_blank" rel="noopener">LinkedIn</a>
+<div class="wrap">
+<nav><div class="l"><b>OO</b><a href="#work">Work</a><a href="#path">Experience</a><a href="#skills">Skills</a></div><button id="tg" type="button">Theme</button></nav>
+
+<section class="hero">
+<div>
+<div class="tag"><i></i>Open to remote roles</div>
+<h1>Odunayo<br><em>Ojomo.</em></h1>
+<p class="bio">I’m a Flutter engineer who builds fintech and payment apps, with backend experience in Java and ISO 8583 transaction processing.</p>
 </div>
+<div class="cta">
+<a class="btn p" href="mailto:odunayoojomo0@gmail.com">Get in touch</a>
+<a class="btn" href="https://github.com/virtz" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/odunayo-ojomo/" target="_blank" rel="noopener">LinkedIn</a>
+<span class="meta">Based in Mauritius</span>
+</div>
+</section>
 
-<h2>Selected work</h2>
+<section class="stats">
+<div><b>6+</b><span>years shipping Flutter</span></div>
+<div><b>40%</b><span>faster transactions, Swwipe POS</span></div>
+<div><b>30%</b><span>fewer transaction failures</span></div>
+<div><b>25%</b><span>higher adoption, Swwipe POS</span></div>
+</section>
 
-<div class="card">
+<h2 id="work">Selected work</h2>
+<section class="grid">
+<div class="card big">
+<div class="n">01</div>
 <h3>Swwipe POS</h3>
 <div class="meta">Swwipe Financial Services &middot; 2023 to present</div>
-<p>I lead Flutter development of an NFC contactless payment platform, and I contribute on the backend in Java and Spring Boot, including ISO 8583 transaction processing. Transaction speed improved by 40%, failures dropped by 30%, and adoption grew by 25%.</p>
-<div class="tags"><span>Flutter</span><span>Java</span><span>Spring Boot</span><span>NFC</span><span>ISO 8583</span><span>Mastercard SDK</span></div>
+<p>I lead Flutter development of an NFC contactless payment platform, and I contribute on the backend in Java, including ISO 8583 transaction processing. Transaction speed improved by 40%, failures dropped by 30%, and adoption grew by 25%.</p>
+<div class="lk"><a href="https://www.swwipe.com/" target="_blank" rel="noopener">Website</a><a href="https://apps.apple.com/us/app/swwipe/id6463031984" target="_blank" rel="noopener">App Store</a></div>
+<div class="tags"><span>Flutter</span><span>Java</span><span>NFC</span><span>ISO 8583</span><span>Mastercard SDK</span></div>
 </div>
-
 <div class="card">
+<div class="n">02</div>
 <h3>AltBank</h3>
 <div class="meta">Mobile banking</div>
 <p>An Islamic banking mobile platform built in Flutter, with Clean Architecture and API-driven account features.</p>
+<div class="lk"><a href="https://altbank.ng/" target="_blank" rel="noopener">Website</a><a href="https://apps.apple.com/us/app/altbank/id6461120800" target="_blank" rel="noopener">App Store</a></div>
 <div class="tags"><span>Flutter</span><span>Dart</span><span>REST APIs</span></div>
 </div>
-
 <div class="card">
+<div class="n">05</div>
 <h3>Aronbiz</h3>
 <div class="meta">Crypto</div>
 <p>A crypto wallet and transfer platform, focused on secure flows and reliable transaction state in the app.</p>
 <div class="tags"><span>Flutter</span><span>Dart</span><span>Wallets</span></div>
 </div>
-
 <div class="card">
-<h3>Ajeo</h3>
-<div class="meta">Product comparison &middot; 2021 to 2022</div>
-<p>A real-time product comparison app. I cut crash rates by 35% and improved launch time by 40% through profiling, and migrated the codebase to null safety. It holds a 4.5&#9733;+ rating on the Play Store.</p>
-<div class="tags"><span>Flutter</span><span>Performance</span><span>Null safety</span></div>
+<div class="n">03</div>
+<h3>AltPro</h3>
+<div class="meta">Mobile app</div>
+<p>A mobile app I contributed to.</p>
+<div class="lk"><a href="https://apps.apple.com/us/app/altpro-mobile/id6503241379" target="_blank" rel="noopener">App Store</a></div>
 </div>
-
 <div class="card">
+<div class="n">04</div>
+<h3>Zyggy</h3>
+<div class="meta">Mobile app</div>
+<p>A mobile app I contributed to.</p>
+<div class="lk"><a href="https://apps.apple.com/us/app/zyggy/id6473276596" target="_blank" rel="noopener">App Store</a></div>
+</div>
+<div class="card">
+<div class="n">06</div>
 <h3>Aims Datacapture</h3>
 <div class="meta">Enterprise &middot; Under NDA</div>
 <p>An enterprise data collection system. Details are confidential, but I can talk through my role and approach in an interview.</p>
 <div class="tags"><span>Flutter</span><span>Offline-first</span><span>APIs</span></div>
 </div>
+</section>
 
-<h2>Experience</h2>
-<div class="row"><span>Software Engineer, Swwipe Financial Services</span><span>2023 to now</span></div>
-<div class="row"><span>Flutter Developer (Contract), Envizien, USA</span><span>2025 to 2026</span></div>
-<div class="row"><span>Flutter Developer (Contract), Sterling Bank</span><span>2022 to 2023</span></div>
-<div class="row"><span>Flutter Developer, Ajeo</span><span>2021 to 2022</span></div>
-<div class="row"><span>Flutter &amp; Full Stack Developer, Biomach Technologies</span><span>2020 to 2021</span></div>
-<div class="row"><span>Flutter Developer, AddlioTech</span><span>2018 to 2020</span></div>
-
-<h2>Skills</h2>
-<div class="skills">
-<p><b>Mobile:</b> Flutter, Dart, platform channels, NFC, offline-first, push notifications</p>
-<p><b>Architecture:</b> Clean Architecture, MVVM, BLoC, Riverpod, Provider</p>
-<p><b>Backend:</b> Java, Spring Boot, Node.js, ISO 8583, webhooks</p>
-<p><b>Delivery:</b> GitHub Actions, Codemagic, Fastlane, Firebase, Crashlytics</p>
+<section class="two">
+<div>
+<h2 id="path">Experience</h2>
+<div class="tl">
+<div><b>Software Engineer</b><span>Swwipe Financial Services &middot; 2023 to now</span></div>
+<div><b>Flutter Developer (Contract)</b><span>Envizien, USA &middot; 2025 to 2026</span></div>
+<div><b>Flutter Developer (Contract)</b><span>Sterling Bank &middot; 2022 to 2023</span></div>
+<div><b>Flutter Developer</b><span>Ajeo &middot; 2021 to 2022</span></div>
+<div><b>Flutter &amp; Full Stack Developer</b><span>Biomach Technologies &middot; 2020 to 2021</span></div>
+<div><b>Flutter Developer</b><span>AddlioTech &middot; 2018 to 2020</span></div>
 </div>
+</div>
+<div>
+<h2 id="skills">Skills</h2>
+<div class="sk"><h4>Mobile</h4><div><span>Flutter</span><span>Dart</span><span>Platform channels</span><span>NFC</span><span>Offline-first</span><span>Push notifications</span></div></div>
+<div class="sk"><h4>Architecture</h4><div><span>Clean Architecture</span><span>MVVM</span><span>BLoC</span><span>Riverpod</span><span>Provider</span></div></div>
+<div class="sk"><h4>Backend</h4><div><span>Java</span><span>Node.js</span><span>ISO 8583</span><span>Webhooks</span></div></div>
+<div class="sk"><h4>Delivery</h4><div><span>GitHub Actions</span><span>Codemagic</span><span>Fastlane</span><span>Firebase</span><span>Crashlytics</span></div></div>
+</div>
+</section>
 
-<footer>
-<p>Let's talk: <a href="mailto:odunayoojomo0@gmail.com">odunayoojomo0@gmail.com</a></p>
-</footer>
-</main>
+<section class="contact">
+<p class="big">Looking for a Flutter engineer who ships?</p>
+<div class="row">
+<a class="btn p" href="mailto:odunayoojomo0@gmail.com">odunayoojomo0@gmail.com</a>
+<a class="btn" href="https://www.linkedin.com/in/odunayo-ojomo/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/virtz" target="_blank" rel="noopener">GitHub</a>
+</div>
+</section>
+<footer>&copy; Odunayo Ojomo</footer>
+</div>
+<script>
+document.getElementById("tg").addEventListener("click",function(){
+var r=document.documentElement,d=r.getAttribute("data-theme");
+if(!d){d=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+r.setAttribute("data-theme",d==="dark"?"light":"dark");
+});
+</script>
 </body>
 </html>
